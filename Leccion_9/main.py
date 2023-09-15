@@ -26,3 +26,26 @@ def calcularImpuesto(pago,impuesto):
 pago = int(input("Proporcione el pago sin impuesto: "))
 impuesto = int(input("Proporcione el monto del impuesto: "))
 print(f"Pago con el impuesto: {calcularImpuesto(pago,impuesto)}")
+
+print("\n********** Palindromo **********")
+
+der = 0
+pal = input("Ingrese una palabra")
+izq = len(pal)
+bandera = False
+
+for let in pal:
+    bandera = False
+    if pal[der] != pal[izq-1]:
+        print(f"La palabra {pal} no es palindromo")
+        break
+    elif der != izq and pal[der] == pal[izq-1]:
+        der += 1
+        izq -= 1
+        bandera = True
+
+if bandera == True:
+    print("Es palindromo")
+
+
+
