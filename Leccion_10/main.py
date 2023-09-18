@@ -20,12 +20,35 @@ print(f"Area del rectangulo {rectangulo.calcularArea()}")
 #INICIO DE CALCULO DE VOLUMEN
 class VolumenCubo:
     def __init__(self,ancho,profundo,alto):
-        self.ancho = ancho
-        self.profundo = profundo
-        self.alto = alto
+        self._ancho = ancho
+        self._profundo = profundo
+        self._alto = alto
 
+    @property
+    def ancho(self):
+        return self._ancho
+
+    @ancho.setter
+    def ancho(self,ancho):
+        self._ancho = ancho
+
+    @property
+    def profundo(self):
+        return self._profundo
+
+    @profundo.setter
+    def profundo(self, profundo):
+        self._profundo = profundo
+
+    @property
+    def alto(self):
+        return self._alto
+
+    @alto.setter
+    def alto(self, alto):
+        self._alto = alto
     def calcularVolumen(self):
-        return self.ancho * self.profundo * self.alto
+        return self._ancho * self._profundo * self._alto
 
 print("********** VOLUMEN DE UN CUBO **********")
 ancho = int(input("Ingresa el ancho del cubo: "))
