@@ -23,3 +23,6 @@ try:
 
 except:
     print('Conexion Fallida')
+finally:
+    print('Conexion cerrada')
+    conexion.close()
