@@ -3,3 +3,24 @@
 04:45:00 PM: WARNING [logger_base.py:14] Mensaje a nivel de warning
 04:45:00 PM: ERROR [logger_base.py:15] Mensaje a nivel de error
 04:45:00 PM: CRITICAL [logger_base.py:16] Mensaje a nivel critico
+12:24:51 PM: DEBUG [Persona.py:43] 
+            Id Persona: 1,
+            Nombre: Juan, 
+            Apellido: Esparza
+            
+12:26:44 PM: DEBUG [Persona.py:43] 
+            Id Persona: 1,
+            Nombre: Juan, 
+            Apellido: Esparza
+            
+12:55:03 PM: DEBUG [Conexion.py:20] Conexion exitosa
+12:55:40 PM: DEBUG [Conexion.py:20] Conexion exitosa
+12:55:40 PM: DEBUG [Conexion.py:33] Se abrio correctamente el cursor
+01:13:27 PM: DEBUG [Conexion.py:20] Conexion exitosa
+01:13:27 PM: DEBUG [Conexion.py:33] Se abrio correctamente el cursor
+01:13:46 PM: DEBUG [Conexion.py:20] Conexion exitosa
+01:13:46 PM: DEBUG [Conexion.py:33] Se abrio correctamente el cursor
+01:14:34 PM: DEBUG [Conexion.py:20] Conexion exitosa
+01:14:34 PM: DEBUG [Conexion.py:33] Se abrio correctamente el cursor
+10:43:27 AM: DEBUG [Conexion.py:20] Conexion exitosa
+10:43:27 AM: DEBUG [Conexion.py:33] Se abrio correctamente el cursor

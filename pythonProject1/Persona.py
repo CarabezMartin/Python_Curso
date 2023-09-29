@@ -1,6 +1,7 @@
+from logger_base import log
 class Persona:
 
-    def __init__(self,id_persona,nombre,apellido):
+    def __init__(self,id_persona=None,nombre=None,apellido=None):
         self._id_persona = id_persona
         self._nombre = nombre
         self._apellido = apellido
@@ -36,3 +37,7 @@ class Persona:
     @apellido.setter
     def apellido(self, apellido):
         self._apellido = apellido
+
+if __name__ == '__main__':
+    persona1 = Persona(1,'Juan','Esparza')
+    log.debug(persona1)
