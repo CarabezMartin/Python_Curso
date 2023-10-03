@@ -29,16 +29,36 @@ class PersonaDAO:
             print(f'Persona a insertar: {persona}')
             valores = (persona.nombre,persona.apellido)
             cursor.execute(cls._INSERT,valores)
+            print('Persona insertada con exito!')
 
+    @classmethod
+    def actualizar(cls,persona):
+        with Conexion.obtenerCursor() as cursor:
+            valores = (persona.nombre,persona.apellido,persona.id_persona)
+            cursor.execute(cls._UPDATE,valores)
+            return cursor.rowcount
 
 if __name__ == '__main__':
-    personas = PersonaDAO.seleccionar()
+    # personas = PersonaDAO.seleccionar()
+    #
+    # for persona in personas:
+    #     print(persona)
+    #
+    # personas = PersonaDAO.seleccionar()
+    #
+    # for persona in personas:
+    #     print(persona)
+    #
+    # #Insertar registro
+    # print('Insertar registro'.center(50,'*'))
+    # nombre = input('Ingrese el nombre: ')
+    # apellido = input('Ingrese el apellido: ')
+    # persona = Persona(id_persona=None,nombre=nombre,apellido=apellido)
+    # PersonaDAO.insetar(persona)
 
-    for persona in personas:
-        print(persona)
-
-    PersonaDAO.insetar()
-
+    # Actualizar registro
+    persona = Persona(id_persona=10,nombre='Raul',apellido='Gonzalez')
+    PersonaDAO.actualizar(persona)
     personas = PersonaDAO.seleccionar()
 
     for persona in personas:
